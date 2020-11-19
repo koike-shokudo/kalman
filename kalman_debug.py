@@ -41,9 +41,6 @@ df_7['velo [m/s]'] = np.sqrt(df_6['u_velo^2 [m/s]'] + df_7['vm_velo^2 [m/s]'])
 df_8['velo [m/s]'] = np.sqrt(df_6['u_velo^2 [m/s]'] + df_8['vm_velo^2 [m/s]'])
 
 
-
-print(p_temp)
-
 def lowpass(data):
     N = len(data)    # サンプル数
     dt = 0.1          # サンプリング間隔
