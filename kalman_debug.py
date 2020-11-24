@@ -89,6 +89,7 @@ def kalman_filter(df, input):
     myu = sum(y_input) / n
     # calculate autocorrelation function
     rk = sm.tsa.stattools.acf(y_input, nlags = arn)
+    rk = rk * c0
     k = 0
     # drow figure
     # plt.plot(t, rk)
