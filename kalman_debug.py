@@ -82,6 +82,7 @@ def kalman_filter(df, input):
     ck  = np.zeros(arn)
     rk  = np.zeros(arn)
     aic = np.zeros(arn)
+    c0  = np.var(y_input) #variance
     k   = 0
     t   = range(arn + 1)
     # calculate mean value
