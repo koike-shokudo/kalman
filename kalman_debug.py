@@ -74,7 +74,9 @@ def kalman_filter(df, input):
     arn = 200
     # observe data
     y_input = df[input].values.tolist()
-    t_list = np.arange(0, len(df) / 10, 0.1)
+    t_list  = np.arange(0, len(df) / 10, 0.1)
+    # for i in range(len(df)):
+    #     y_input[i] = np.sin( float(i) * 0.1 )
     '''標本自己共分散を求める
     ck:自己共分散関数 ，rk:自己相関関数'''
     vv = np.random.normal(loc = 0, scale = 0.5, size = n)
